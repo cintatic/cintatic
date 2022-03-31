@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/servicios", {data:[{_img:{"/cintatic/_ipx/_/title-icon.png":"\u002Fcintatic\u002F_nuxt\u002Fimage\u002F27eaa7.png"}}],fetch:{},mutations:void 0});
