@@ -1,76 +1,60 @@
 <template>
-  <article>
-    <section class="text-gray-900 body-font">
-      <div class="container px-5 mx-auto">
-        <h1 class="text-left py-12 font-bold font-sans text-4xl">Blog</h1>
-        <div class="flex flex-wrap -m-4">
-          <NuxtLink
-            v-for="post in page"
-            :key="post.id"
-            :to="{ name: 'blog-slug', params: { slug: post.slug } }"
-            class="p-4 md:w-1/3"
+  <section class="text-gray-601 body-font">
+    <div class="container px-6 py-12 mx-auto">
+      <div class="flex flex-wrap w-full mb-21">
+        <div class="lg:w-2/2 w-full mb-6 lg:mb-0">
+          <h1
+            class="sm:text-6xl text-6xl text-center font-bold title-font mb-2 text-gray-900"
           >
-            <div
-              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
-            >
+            BLOG
+          </h1>
+        </div>
+        <p
+          class="lg:w-2/2 w-full leading-relaxed text-center text-gray-700 mb-6"
+        >
+          Ponte al tanto de nuestras noticias, tendencias e información
+          importante a traveś de nuestro blog.
+        </p>
+      </div>
+      <div class="flex flex-wrap -m-5">
+        <div
+          v-for="article in articles"
+          :key="article.slug"
+          class="xl:w-2/4 md:w-1/2 p-4"
+        >
+          <NuxtLink
+            :to="{
+              name: 'blog-slug',
+              params: { slug: article.slug },
+            }"
+          >
+            <div class="bg-gray-101 p-6 rounded-lg">
               <nuxt-img
-                provider="cloudinary"
-                class="lg:h-48 md:h-36 w-full object-cover object-center"
-                :src="post.image"
-                alt="blog"
+                class="h-41 rounded w-full object-cover object-center mb-6"
+                :src="article.image"
+                alt="content"
               />
-              <div class="p-6">
-                <h2
-                  class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
-                >
-                  {{ formatDate(post.createdAt) }}
-                </h2>
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                  {{ post.title }}
-                </h1>
-                <p class="leading-relaxed mb-3">
-                  {{ post.description }}
-                </p>
-                <div class="flex items-center flex-wrap">
-                  <a class="inline-flex items-center md:mb-2 lg:mb-0"
-                    >Leer más
-                    <svg
-                      class="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M5 12h14"></path>
-                      <path d="M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
+
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                {{ article.title }}
+              </h2>
+              <p class="leading-relaxed text-base">
+                {{ article.description }}
+              </p>
             </div>
           </NuxtLink>
         </div>
       </div>
-    </section>
-  </article>
+    </div>
+  </section>
 </template>
-
 <script>
 export default {
   async asyncData({ $content }) {
-    const page = await $content().fetch();
-
+    const articles = await $content("blog").fetch();
     return {
-      page,
+      articles,
     };
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      return new Date(date).toLocaleDateString("es", options);
-    },
   },
 };
 </script>

@@ -1,8 +1,8 @@
 ---
-title: ¿Cómo te ayuda un sitio web?
-description: 'En pleno 2021 tener un negocio y no tener sitio web podría significar no tener negocio'
-image: v1630300237/internet-mondo-connesso.1020x680_joaoqn.webp
-slug: como-te-ayuda-un-sitio
+title: "¿Cómo te ayuda un sitio web?"
+description: "En pleno 2021 tener un negocio y no tener sitio web podría significar no tener negocio"
+image: "/blog/internet.jpg"
+slug: "como-te-ayuda-un-sitio"
 ---
 
 En la actualidad, un negocio que no se encuentra en Internet es como si no existiera, así de simple. Por eso es vital que tu empresa este presente en Internet y tenga una página web, para que tus clientes o futuros clientes estén siempre informados.

@@ -1,15 +1,6 @@
 <template>
   <div
-    class="
-      px-4
-      py-5
-      mx-auto
-      sm:max-w-xl
-      md:max-w-full
-      lg:max-w-screen-xl
-      md:px-24
-      lg:px-8
-    "
+    class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
   >
     <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
       <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -18,13 +9,7 @@
             to="/blog"
             aria-label="Blog"
             title="Blog"
-            class="
-              font-medium
-              tracking-wide
-              text-gray-700
-              transition-colors
-              duration-200
-            "
+            class="font-medium tracking-wide text-gray-700 transition-colors duration-200"
             >Blog</NuxtLink
           >
         </li>
@@ -33,33 +18,10 @@
             to="/servicios"
             aria-label="Servicios"
             title="Servicios"
-            class="
-              font-medium
-              tracking-wide
-              text-gray-700
-              transition-colors
-              duration-200
-            "
+            class="font-medium tracking-wide text-gray-700 transition-colors duration-200"
             >Servicios</NuxtLink
           >
         </li>
-        <!--
-        <li>
-          <NuxtLink
-            to="/paquetes"
-            aria-label="Paquetes"
-            title="Paquetes"
-            class="
-              font-medium
-              tracking-wide
-              text-gray-700
-              transition-colors
-              duration-200
-            "
-            >Paquetes</NuxtLink
-          >
-        </li>
-        -->
       </ul>
       <NuxtLink
         to="/"
@@ -70,26 +32,26 @@
         <nuxt-img class="w-36" src="/title-icon.png" />
       </NuxtLink>
       <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
-        <li>
+        <li class="">
           <a href="https://instagram.com/cintaticmx">
-            <font-awesome-icon
-              class="ml-3 text-3xl"
-              :icon="['fab', 'instagram']"
+            <nuxt-img
+              class="inline-block align-middle ml-3 text-3xl w-8"
+              src="/icons/instagram-brands.svg"
             />
           </a>
 
           <a href="https://facebook.com/cintaticmx">
-            <font-awesome-icon
-              class="ml-3 text-3xl"
-              :icon="['fab', 'facebook']"
+            <nuxt-img
+              class="inline-block align-middle ml-3 text-3xl w-8"
+              src="/icons/facebook-brands.svg"
             />
           </a>
           <a
             href="https://api.whatsapp.com/send?phone=525628348062&text=%C2%A1Hola!%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20sus%20servicios."
           >
-            <font-awesome-icon
-              class="ml-3 text-3xl"
-              :icon="['fab', 'whatsapp']"
+            <nuxt-img
+              src="/icons/whatsapp-brands.svg"
+              class="inline-block align-middle ml-3 w-8"
             />
           </a>
         </li>
@@ -99,14 +61,7 @@
         <button
           aria-label="Open Menu"
           title="Open Menu"
-          class="
-            p-2
-            -mr-1
-            transition
-            duration-200
-            rounded
-            focus:outline-none focus:shadow-outline
-          "
+          class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
           @click="isMenuOpen = !isMenuOpen"
         >
           <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -141,16 +96,7 @@
                 <button
                   aria-label="Close Menu"
                   title="Close Menu"
-                  class="
-                    p-2
-                    -mt-2
-                    -mr-2
-                    transition
-                    duration-200
-                    rounded
-                    hover:bg-gray-200
-                    focus:bg-gray-200 focus:outline-none focus:shadow-outline
-                  "
+                  class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                   @click="isMenuOpen = false"
                 >
                   <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -166,16 +112,10 @@
               <ul class="space-y-4">
                 <li>
                   <NuxtLink
-                    to="blog"
+                    to="/blog"
                     aria-label="Blog"
                     title="Blog"
-                    class="
-                      font-medium
-                      tracking-wide
-                      text-gray-700
-                      transition-colors
-                      duration-200
-                    "
+                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200"
                     >Blog</NuxtLink
                   >
                 </li>
@@ -184,13 +124,7 @@
                     to="/servicios"
                     aria-label="Servicios"
                     title="Servicios"
-                    class="
-                      font-medium
-                      tracking-wide
-                      text-gray-700
-                      transition-colors
-                      duration-200
-                    "
+                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200"
                     >Servicios</NuxtLink
                   >
                 </li>
@@ -199,54 +133,48 @@
                     to="/paquetes"
                     aria-label="Paquetes"
                     title="Paquetes"
-                    class="
-                      font-medium
-                      tracking-wide
-                      text-gray-700
-                      transition-colors
-                      duration-200
-                    "
+                    class="font-medium tracking-wide text-gray-700 transition-colors duration-200"
                     >Paquetes</NuxtLink
                   >
                 </li>
               </ul>
               <span class="flex mt-5 justify-center">
                 <a v-if="ios" href="fb://profile/106070931823082">
-                  <font-awesome-icon
-                    class="mx-5 text-3xl"
-                    :icon="['fab', 'facebook']"
+                  <nuxt-img
+                    class="mx-5 text-3xl w-8"
+                    src="/icons/facebook-brands.svg"
                   />
                 </a>
 
                 <a v-else-if="android" href="fb://page/106070931823082">
-                  <font-awesome-icon
-                    class="mx-5 text-3xl"
-                    :icon="['fab', 'facebook']"
+                  <nuxt-img
+                    class="mx-5 text-3xl w-8"
+                    src="/icons/facebook-brands.svg"
                   />
                 </a>
 
                 <a v-else href="https://facebook.com/cintaticmx">
-                  <font-awesome-icon
-                    class="mx-5 text-3xl"
-                    :icon="['fab', 'facebook']"
+                  <nuxt-img
+                    class="mx-5 text-3xl w-8"
+                    src="/icons/facebook-brands.svg"
                   />
                 </a>
                 <a href="https://instagram.com/cintaticmx">
-                  <font-awesome-icon
-                    class="mx-5 text-3xl"
-                    :icon="['fab', 'instagram']"
+                  <nuxt-img
+                    class="mx-5 text-3xl w-8"
+                    src="/icons/instagram-brands.svg"
                   />
                 </a>
                 <a href="https://instagram.com/cintaticmx">
-                  <font-awesome-icon
-                    class="mx-5 text-3xl"
-                    :icon="['fab', 'whatsapp']"
+                  <nuxt-img
+                    class="mx-5 text-3xl w-8"
+                    src="/icons/whatsapp-brands.svg"
                   />
                 </a>
                 <a href="tel:5628348062">
-                  <font-awesome-icon
-                    class="mx-5 text-3xl"
-                    :icon="['fas', 'phone']"
+                  <nuxt-img
+                    class="mx-5 text-3xl w-8"
+                    src="/icons/facebook-brands.svg"
                   />
                 </a>
               </span>
@@ -265,17 +193,17 @@ export default {
       isMenuOpen: false,
       ios: null,
       android: null,
-    }
+    };
   },
   watch: {
     $route() {
-      this.isMenuOpen = false
+      this.isMenuOpen = false;
     },
   },
   mounted() {
-    if (navigator.userAgent.toLowerCase().includes('iphone')) this.ios = true
-    if (navigator.userAgent.toLowerCase().includes('android'))
-      this.android = true
+    if (navigator.userAgent.toLowerCase().includes("iphone")) this.ios = true;
+    if (navigator.userAgent.toLowerCase().includes("android"))
+      this.android = true;
   },
-}
+};
 </script>

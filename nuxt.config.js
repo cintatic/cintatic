@@ -29,27 +29,8 @@ export default {
     "@nuxt/image",
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/fontawesome",
   ],
 
-  fontawesome: {
-    icons: {
-      solid: [
-        "faQuestion",
-        "faPhone",
-        "faPiggyBank",
-        "faDraftingCompass",
-        "faMicrochip",
-        "faHeadset",
-        "faGlobe",
-        "faBolt",
-        "faPlay",
-        "faLock",
-        "faAngleDoubleRight",
-      ],
-      brands: ["faFacebook", "faInstagram", "faGoogle", "faWhatsapp"],
-    },
-  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
@@ -64,12 +45,6 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: "/",
-  },
-
-  image: {
-    cloudinary: {
-      baseURL: "https://res.cloudinary.com/dl8qww4c7/image/upload/",
-    },
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
