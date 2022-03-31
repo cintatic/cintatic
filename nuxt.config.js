@@ -66,6 +66,12 @@ export default {
     baseURL: "/",
   },
 
+  image: {
+    cloudinary: {
+      baseURL: "https://res.cloudinary.com/dl8qww4c7/image/upload/",
+    },
+  },
+
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {

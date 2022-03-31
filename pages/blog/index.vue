@@ -11,14 +11,9 @@
             class="p-4 md:w-1/3"
           >
             <div
-              class="
-                h-full
-                border-2 border-gray-200 border-opacity-60
-                rounded-lg
-                overflow-hidden
-              "
+              class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
             >
-              <NuxtImg
+              <nuxt-img
                 provider="cloudinary"
                 class="lg:h-48 md:h-36 w-full object-cover object-center"
                 :src="post.image"
@@ -26,14 +21,7 @@
               />
               <div class="p-6">
                 <h2
-                  class="
-                    tracking-widest
-                    text-xs
-                    title-font
-                    font-medium
-                    text-gray-400
-                    mb-1
-                  "
+                  class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
                 >
                   {{ formatDate(post.createdAt) }}
                 </h2>
@@ -72,17 +60,17 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const page = await $content().fetch()
+    const page = await $content().fetch();
 
     return {
       page,
-    }
+    };
   },
   methods: {
     formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('es', options)
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("es", options);
     },
   },
-}
+};
 </script>
